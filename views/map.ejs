@@ -18,11 +18,13 @@
         <% for(let idx = 0; idx < pos.length; idx++) { %>
             <button id="<%= pos[idx].name %>" class="button" onclick = "Change_popup('<%= JSON.stringify(pos[idx]) %>')" 
                 style="position:absolute; left:<%=pos[idx].x_pos%>px; top:<%=pos[idx].y_pos%>px;">
+    
                 <!-- <%= pos[idx].name %> --> </button>
         <% } %>
 
 
         <script>
+            console.log("hello");
         </script>
     </div>
 
