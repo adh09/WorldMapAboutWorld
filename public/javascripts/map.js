@@ -91,7 +91,8 @@ function Hide_ranking() {
 }
 function func_ranking() {
     console.log(ord, cat);
-    document.getElementById("ranking_explain").innerText= (((cat == 1) ? "population  " : "territory  ") + ((ord == 1) ? "A to Z" : "Z to A"));
+    document.getElementById("ranking_explain").innerText= 
+    (((cat == 1) ? "population  " : "territory  ") + ((ord == 1) ? "A to Z" : "Z to A"));
     fetch(`/population?order=${ord}&category=${cat}`)
     .then((population) => population.json())
     .then((popul) => {
