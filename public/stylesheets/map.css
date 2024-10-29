@@ -1,0 +1,684 @@
+:root
+{
+    --dark_black: black;
+    --dark_white: white;
+    --button_color: darkgray;
+    --background_color: black;
+    --worldmap: invert(0%);
+}
+
+.day-night-mode
+{
+    --dark_black: white;
+    --dark_white: black;
+    --button_color: rgb(219, 219, 219);
+    --background_color: rgb(212, 212, 212);
+    --worldmap: invert(100%)
+}
+
+.major-mono-display-regular 
+{
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+body
+{
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    
+    overflow-y:scroll;
+    background: var(--background_color);
+}
+img
+{
+    position: absolute;
+    width: 1600px;
+    height: 790px;
+    left: 160px;
+    top: 210px;
+    z-index: 1;
+
+    filter: var(--worldmap);
+}
+
+
+/*상위 텍스트*/
+div.web_title
+{
+    position: absolute;
+    width: 203;
+    height: 140;
+    left: 60px;
+    top: 38px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 100px;
+
+    color: var(--dark_white);
+
+    z-index: 4;
+}
+div.menu
+{
+    position: absolute;
+    width: 203;
+    height: 140;
+    left: 280px;
+    top: 64px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100px;
+
+    color: var(--dark_white);
+
+    z-index: 4;
+}
+
+#search
+{
+    position: absolute;
+    top: 135px;
+    left: 640px;
+    color: var(--dark_black);
+    background-color: var(--dark_white);
+
+    font-size: 20px;
+
+    z-index: 2;
+}
+#search_list
+{
+    position: absolute;
+    left: 640px;
+    top: 30px;
+    background-color: white;
+}
+.search_table
+{
+    color: white;
+    width: 547px;
+    height: 50px;
+}
+
+hr {
+    width : 95%;
+    height : 5px;
+    
+    top: 138px;
+    left: 50px;
+
+    background-color : var(--dark_white);
+    border : 0;
+    border-radius: 3px;
+    position: absolute;
+  }
+
+/*메뉴바*/
+
+.menubar
+{
+    position: relative;
+    top: 125px;
+    left: 50px;
+
+    width: 95%;
+    height: 100px;
+    border-radius: 3px;
+    background-color: var(--dark_white);
+    visibility: hidden;
+    z-index: 5;
+    border-bottom: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: gray;
+}
+.open-menubar
+{
+    visibility: visible;
+}
+.menubar button
+{
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    color: var(--dark_black);
+    z-index: 5;
+}
+button.reset
+{
+    position: absolute;
+    top: -5px;
+    left: 50px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100px;
+
+    background: transparent;
+    border: none;
+}
+button.menu
+{
+    /*메뉴바 삭제 버튼*/
+    position: absolute;
+    top: -8px;
+    left: 1750px;
+    height: 15px;
+    width: 30px;
+
+    font-size: 70px;
+
+    border: none;
+    background-color: transparent;
+}
+button.func_countryname
+{
+    position: absolute;
+    top: -5px;
+    left: 290px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100px;
+
+    background-color: transparent;
+    border: none;
+}
+button.func_population
+{
+    position: absolute;
+    top: -5px;
+    left: 600px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100px;
+
+    background: transparent;
+    border: none;
+}
+button.func_territory
+{
+    position: absolute;
+    top: -5px;
+    left: 1030px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100px;
+
+    background: transparent;
+    border: none;
+}
+button.func_territory
+{
+    position: absolute;
+    top: -5px;
+    left: 1030px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100px;
+
+    background: transparent;
+    border: none;
+}
+button.func_ranking
+{
+    position: absolute;
+    top: -5px;
+    left: 1430px;
+
+    font-family: 'Major Mono Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 100px;
+
+    background: transparent;
+    border: none;
+}
+
+/*팝업*/
+
+.popup
+{
+    width: 400px;
+    height: 300px;
+    background: white;
+    border-radius: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    outline: auto;
+    outline-color: black;
+    padding: 0 30px 30px;
+    color: #ffffff;
+    visibility: hidden;
+    z-index: 3;
+}
+#country_name
+{
+    font-size: 250%;
+    font-size-adjust: auto;
+}
+.open-popup
+{
+    visibility: visible;
+}
+.popup h1
+{
+    color: black;
+    font-size: 50px;
+    font-family: fangsong;
+}
+.popup h2
+{
+    color:black;
+    font-size: 30px;
+    font-family: fangsong;
+}
+.popup button
+{
+    color: white;
+    width: 100px;
+    height: 50px;
+
+    left: 180px;
+    top: 80%;
+
+    margin-top: 50px;
+    padding: 10px 0;
+    background: black;
+
+    border-width: 1px;
+    border-color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: fangsong;
+    cursor: pointer;
+}
+
+/*버튼*/
+
+button
+{
+    height: 20px;
+    width: 20px;
+    border-radius: 100px;
+    position: absolute;
+    color: white;
+    background-color: var(--button_color);
+    z-index: 2;
+}
+.hide-button
+{
+    visibility: hidden;
+}
+
+/*텍스트*/
+
+/*국가*/
+h1.country_text
+{
+    visibility: hidden;
+    position: absolute;
+    font-size: 15px;
+    color: red;
+
+    z-index: 3;
+    transition: all 300ms;
+}
+h1.country_text:hover
+{
+    z-index: 4;
+    color: blue;
+    font-size: 25px;
+    font-size-adjust: 0px;
+}
+h1.show-country
+{
+    visibility: visible;
+}
+
+/*인구*/
+
+h1.population_text
+{
+    visibility: hidden;
+    position: absolute;
+    font-size: 18px;
+    color: red;
+
+    z-index: 3;
+    transition: all 300ms;
+}
+h1.population_text:hover
+{
+    z-index: 4;
+
+    color: blue;
+    font-size: 25px;
+    font-size-adjust: 0px;
+}
+h1.show-population
+{
+    visibility: visible;
+}
+
+/*영토*/
+
+h1.territory_text
+{
+    visibility: hidden;
+    position: absolute;
+    font-size: 18px;
+    color: red;
+
+    z-index: 3;
+    transition: all 300ms;
+}
+h1.territory_text:hover
+{
+    color: blue;
+    font-size: 25px;
+    font-size-adjust: 0px;
+
+    z-index: 4;
+}
+h1.show-territory
+{
+    visibility: visible;
+}
+
+/*랭킹 팝업*/
+table
+{
+    position: absolute;
+    border-collapse: collapse;
+    top: 150px;
+    left: 25px;
+}
+tr,th
+{
+    color: black;
+    width: 30px;
+    height: 10px;
+    text-align: left;
+    border: 1px solid black;
+}
+table thead, table tbody tr {
+    display: table;
+    width: 100%;
+  }
+table tbody 
+{
+    display: block;
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.ranking_popup
+{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    background: white;
+    border-radius: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    outline: auto;
+    outline-color: black;
+    padding: 0 30px 30px;
+    visibility: hidden;
+    z-index: 5;
+    display: flex;
+}
+.show-ranking
+{
+    visibility: visible;
+}
+
+div.ranking
+{
+    text-align: center;
+}
+#table_title
+{
+    position: absolute;
+    top: 30px;
+    left: 95px;
+}
+
+#ranking_title
+{
+    position: absolute;
+    top: 30px;
+    left: 330px;
+
+    width: 300px;
+    
+    text-align: center;
+}
+#ranking_explain
+{
+    position: absolute;
+    top: 70px;
+    left: 400px;
+
+    text-align: left;
+    font-size: 25px;
+}
+#det_popul
+{
+    position: absolute;
+    top: 310px;
+    left: 340px;
+
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+
+    background-color: black;
+    color: white;
+
+    font-size: 80%;
+    text-align: center;
+}
+#det_terri
+{
+    position: absolute;
+    top: 310px;
+    left: 420px;
+    
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+
+    background-color: black;
+    color: white;
+
+    font-size: 80%;
+    text-align: center;
+}
+#det_DESC
+{
+    position: absolute;
+    top: 310px;
+    left: 500px;
+
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+
+    background-color: black;
+    color: white;
+
+    font-size: 80%;
+    text-align: center;
+}
+#det_ASC
+{
+    position: absolute;
+    top: 310px;
+    left: 580px;
+
+    width: 70px;
+    height: 35px;
+    border-radius: 20px;
+
+    background-color: black;
+    color: white;
+
+    font-size: 70%;
+    text-align: center;
+}
+
+#ranking_info
+{
+    position: absolute;
+    top: 120px;
+    left: 340px;
+
+    width: 320px;
+    height: 170px;
+
+    font-size: 130%;
+    text-align: left;
+}
+
+button.ranking
+{
+    color: white;
+    width: 100px;
+    height: 50px;
+
+    left: 270px;
+    top: 450px;
+
+    margin-top: 50px;
+    padding: 10px 0;
+    background: black;
+
+    border-width: 1px;
+    border-color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-family: fangsong;
+    cursor: pointer;
+
+    z-index: 6;
+}
+
+#random_country
+{
+    position: absolute;
+    left: 350px;
+    top: 320px;
+
+    height: 300px;
+}
+.random_button
+{
+    position: absolute;
+    left: 75px;
+    top: 110px;
+
+    color: white;
+    width: 80px;
+    height: 40px;
+
+    margin-top: 50px;
+    padding: 10px 0;
+    background: black;
+
+    border-width: 1px;
+    border-color: white;
+    border-radius: 30px;
+    font-size: 80%;
+    text-align: center;
+    cursor: pointer;
+}
+#random_name
+{
+    position: absolute;
+    width: 300px;
+
+    font-size: 100%;
+    top: 50px;
+
+    text-align: left;
+    font-size-adjust: auto;
+}
+#random_popu
+{
+    position: absolute;
+    font-size: 100%;
+    top: 90px;
+    
+    text-align: left;
+    white-space: nowrap;
+}
+#random_terr
+{
+    position: absolute;
+    font-size: 100%;
+    top: 110px;
+    
+    text-align: left;
+    white-space: nowrap;
+}
+
+
+/*다크모드, 화이트모드*/
+
+.Day
+{
+    position: absolute;
+    left: 1685px;
+    top: 110px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--dark_white);
+
+    font-size: 20px;
+    font-family: Helvetica;
+    color: var(--dark_black);
+}
+.Night
+{
+    position: absolute;
+    left: 1600px;
+    top: 110px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--dark_white);
+    
+    font-size: 20px;
+    font-family: Helvetica;
+    color: var(--dark_black);
+}

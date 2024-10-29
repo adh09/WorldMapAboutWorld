@@ -1,0 +1,56 @@
+.major-mono-display-regular 
+{
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+body
+{
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+
+    background: black;
+}
+img
+{
+    position: absolute;
+    width: 1728px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+}
+
+div .maintitle
+{
+  position: absolute;
+  width: 1333px;
+  height: 200px;
+  left: 101px;
+  top: 822px;
+
+  font-family: 'Major Mono Display';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 120px;
+  line-height: 130px;
+
+  color: #FFFFFF;
+}
+
+div .subtitle
+{
+  position: absolute;
+  width: 815px;
+  height: 145px;
+  left: 145px;
+  top: 744px;
+
+  font-family: 'Major Mono Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 100px;
+
+  color: #FFFFFF;
+}

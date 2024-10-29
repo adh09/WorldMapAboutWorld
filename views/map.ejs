@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>WM</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+    </style>
+    <link rel="stylesheet" href="stylesheets/map.css">
+</head>
+<body>
+    <div class = "web_title" onclick="Refresh()">WM</div>
+    <div class ="menu" onclick="show_menu()">menu</div>
+
+    <div>
+        <img src="images/WorldMap.png" alt="Worldmap" class="WorldMap">
+
+
+        <% for(let idx = 0; idx < pos.length; idx++) { %>
+            <button id="<%= pos[idx].name %>" class="button" onclick = "Change_popup('<%= JSON.stringify(pos[idx]) %>')" 
+                style="position:absolute; left:<%=pos[idx].x_pos%>px; top:<%=pos[idx].y_pos%>px;">
+                <!-- <%= pos[idx].name %> --> </button>
+        <% } %>
+
+
+        <script>
+        </script>
+    </div>
+
+    <div>
+        <% for(let idx = 0; idx < pos.length; idx++) { %>
+            <% if(pos[idx].x_pos != 0) { %>
+                <h1 class="country_text" style="left:<%=pos[idx].x_pos-10%>px; top:<%=pos[idx].y_pos-10%>px;">
+                    <%= pos[idx].name %> </h1>
+                <h1 class="population_text" style="left:<%=pos[idx].x_pos-10%>px; top:<%=pos[idx].y_pos-10%>px;">
+                    <%= pos[idx].population %> </h1>
+                <h1 class="territory_text" style="left:<%=pos[idx].x_pos-10%>px; top:<%=pos[idx].y_pos-10%>px;">
+                    <%= pos[idx].territory %> </h1>
+            <% } %>
+        <% } %>
+    </div>
+    
+    <input id='search' type="text" size="50" onchange='Get_Data()' placeholder="Type to Search"/>
+    <div id='result'></div>
+
+    <!-- 선 -->
+    <hr>
+
+    <!--팝업-->>
+    <div class="container">
+        <div class="popup" id="popup">
+            <h1 id="country_name"></h1>
+            <h2 id="population"></h2>
+            <h2 id="territory"></h2>
+            <button onclick="Hidepopup()">close</button>
+        </div>
+    </div>
+
+    <!-- 메뉴바 -->
+    <div class="menubar">
+        <button class="reset" onclick="reset()">reset</button>
+        <button class="menu" onclick="hide_menu()">×</button>
+        <button class="func_countryname" onclick="func_countryname()">country</button>
+        <button class= "func_population" onclick="func_population()">population</button>
+        <button class= "func_territory" onclick="func_territory()">territory</button>
+        <button class="func_ranking" onclick="func_ranking()">ranking</button>
+    </div>
+
+    <div class="ranking_popup">
+        <div>
+            <h1 id="table_title">World List</h1>
+            <div style="width: 320px; height: 100px; overflow: auto">
+                <table width="300px" border="1">
+                        <tr id="ranking">
+                            <th scope="col">name</th>
+                            <th scope="col">population</th>
+                            <th scope="col">territory</th>
+                        </tr>
+                        <% for(let idx = 0; idx < pos.length; idx++) { %>
+                            <tr>
+                                <th><%= pos[idx].name %></th>
+                                <th><%= pos[idx].population %></th>
+                                <th><%= pos[idx].territory %></th>
+                            </tr> 
+                        <% } %>
+                </table>
+            </div>
+        </div>
+        
+        <div class="ranking">
+            <h1 id="ranking_title">World Ranking</h1>
+            <h1 id="ranking_explain">hi</h1>
+            <button id="det_popul" onclick="cat = 1, func_ranking()">population</button>
+            <button id="det_terri" onclick="cat = 0, func_ranking()">territory</button>
+            <button id="det_DESC" onclick="ord = 0, func_ranking()">ascending</button>
+            <button id="det_ASC" onclick="ord = 1, func_ranking()">descending</button>
+            <h1 id="ranking_info"></h1>
+        </div>
+        <div id="random_country">
+            <h1 id="random_title">Random Country</h1>
+            <div id="randomCountry"></div>
+            <button class="random_button" onclick="getRandom(1, 233)">random</button>
+        </div>
+        <button class="ranking" onclick="Hide_ranking()">close</button>
+    </div>
+
+    <button class="Day" onclick="night()">Day</button>
+    <button class="Night" onclick="day()">Night</button>
+
+    <script src="/javascripts/map.js"></script>
+</body>
+</html>
