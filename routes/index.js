@@ -78,7 +78,9 @@ router.get('/search', function(req, res) {
   conn.query(sql, function(err, result) {
     if (err) console.log("query is not excuted: " + err);
     else {
-      result.forEach( na => {
+      console.log(result);
+      console.log("here");
+      result.forEach( (na) => {
         console.log(na);
         na['name']= na['name'].toLocaleString("ko-KR");
         na['population']= na['population'].toLocaleString("ko-KR");
