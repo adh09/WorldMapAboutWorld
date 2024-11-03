@@ -85,21 +85,22 @@ div.menu
 #search
 {
     position: absolute;
-    top: 135px;
+    top: 120px;
     left: 640px;
     color: var(--dark_black);
     background-color: var(--dark_white);
 
     font-size: 20px;
 
-    z-index: 2;
+    z-index: 6;
 }
 #search_list
 {
     position: absolute;
     left: 640px;
-    top: 70px;
+    top: 140px;
     background-color: white;
+    z-index: 6;
 }
 #result
 {
