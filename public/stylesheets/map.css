@@ -98,12 +98,12 @@ div.menu
 {
     position: absolute;
     left: 640px;
-    top: 30px;
+    top: 70px;
     background-color: white;
 }
 #result
 {
-    color: white;
+    color: black;
 }
 .search_table
 {
