@@ -103,15 +103,12 @@ div.menu
     z-index: 6;
     color: black;
 }
-#result
-{
-    color: black;
-}
 .search_table
 {
     color: black;
     width: 547px;
     height: 50px;
+    text-align: center;
 }
 
 hr {
