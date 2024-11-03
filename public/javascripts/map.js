@@ -33,16 +33,15 @@ function Get_Data()  {
     .then((response) => response.json())
     .then((data) => {
         rct = document.querySelector('#result');
-        rct.innerHTML = '\
+        let msgStr = '\
                 <table id = "search_list"><tbody>\
                         <tr class = "search_table">\
                             <td scope="col">name</td>\
                             <td scope="col">population</td>\
                             <td scope="col">territory</td>\
                         </tr>';
-        console.log(rct.innerHTML);
         data.forEach( datum => {
-            rct.innerHTML += `\
+            msgStr += `\
                         <tr class = "search_table">\
                             <td>${datum.name}</td>\
                             <td>${datum.population}</td>\
@@ -51,7 +50,8 @@ function Get_Data()  {
             console.log(rct.innerHTML);
         });
                             
-        rct.innerHTML += '</tbody></table>';
+        msgStr += '</tbody></table>';
+        rct.innerHTML = msgStr;
     });
   }
 
