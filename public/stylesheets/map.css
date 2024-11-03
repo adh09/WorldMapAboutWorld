@@ -116,14 +116,6 @@ div.menu
     top: 118px;
     left: 800;
 }
-.result
-{
-    visibility: hidden;
-}
-.show-search
-{
-    visibility: visible;
-}
 
 hr {
     width : 95%;
