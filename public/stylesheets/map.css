@@ -85,7 +85,7 @@ div.menu
 #search
 {
     position: absolute;
-    top: 120px;
+    top: 118px;
     left: 640px;
     color: var(--dark_black);
     background-color: var(--dark_white);
@@ -98,9 +98,10 @@ div.menu
 {
     position: absolute;
     left: 640px;
-    top: 140px;
+    top: 145px;
     background-color: white;
     z-index: 6;
+    color: black;
 }
 #result
 {
@@ -108,7 +109,7 @@ div.menu
 }
 .search_table
 {
-    color: white;
+    color: black;
     width: 547px;
     height: 50px;
 }
