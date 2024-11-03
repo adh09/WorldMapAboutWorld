@@ -110,10 +110,6 @@ div.menu
     height: 50px;
     text-align: center;
 }
-.show-search
-{
-    visibility: visible;
-}
 .erase_search
 {
     position: absolute;
@@ -123,6 +119,10 @@ div.menu
 .result
 {
     visibility: hidden;
+}
+.show-search
+{
+    visibility: visible;
 }
 
 hr {
