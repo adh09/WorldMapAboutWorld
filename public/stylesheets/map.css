@@ -101,6 +101,10 @@ div.menu
     top: 30px;
     background-color: white;
 }
+#result
+{
+    color: white;
+}
 .search_table
 {
     color: white;
