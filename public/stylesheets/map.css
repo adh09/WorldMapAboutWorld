@@ -109,6 +109,17 @@ div.menu
     width: 547px;
     height: 50px;
     text-align: center;
+    visibility: hidden;
+}
+.show-search
+{
+    visibility: visible;
+}
+.erase_search
+{
+    position: absolute;
+    top: 118px;
+    left: 800;
 }
 
 hr {

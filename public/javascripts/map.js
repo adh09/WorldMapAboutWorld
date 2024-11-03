@@ -20,13 +20,20 @@ let countrys = document.querySelectorAll(".country_text");
 let populations = document.querySelectorAll(".population_text");
 let territorys = document.querySelectorAll(".territory_text");
 let rankings = document.querySelectorAll(".ranking_popup");
+let e_search = document.querySelectorAll(".erase_search")
 
 let cat = 0;
 let ord = 0;
 
 //검색
 
-function Get_Data()  {
+function remove_search()
+{
+    e_search.forEach(hide_search => hide_search.classList.remove("show-search"));
+}
+
+function Get_Data()  
+{
     const name = document.getElementById('search').value;
     // name을 index.js로 보내기
     fetch("/search/?val="+name)
@@ -52,8 +59,9 @@ function Get_Data()  {
                             
         msgStr += '</tbody></table>';
         rct.innerHTML = msgStr;
+        e_search.forEach(hide_search => hide_search.classList.add("show-search"));
     });
-  }
+}
 
 
 //랜덤
