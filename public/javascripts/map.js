@@ -48,7 +48,6 @@ function Get_Data()
                             <td>${datum.population}</td>\
                             <td>${datum.territory} km2</td>\
                         </tr>`;
-            console.log(rct.innerHTML);
         });
                             
         msgStr += '</tbody></table>';
