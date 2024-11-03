@@ -20,7 +20,7 @@ let countrys = document.querySelectorAll(".country_text");
 let populations = document.querySelectorAll(".population_text");
 let territorys = document.querySelectorAll(".territory_text");
 let rankings = document.querySelectorAll(".ranking_popup");
-let e_search = document.querySelectorAll(".erase_search")
+let e_search = document.querySelector("#result")
 
 let cat = 0;
 let ord = 0;
@@ -29,7 +29,7 @@ let ord = 0;
 
 function remove_search()
 {
-    e_search.forEach(hide_search => hide_search.classList.remove("show-search"));
+    e_search.classList.remove("show-search");
 }
 
 function Get_Data()  
@@ -59,7 +59,7 @@ function Get_Data()
                             
         msgStr += '</tbody></table>';
         rct.innerHTML = msgStr;
-        e_search.forEach(hide_search => hide_search.classList.add("show-search"));
+        e_search.classList.add("show-search");
     });
 }
 
